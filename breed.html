@@ -1,0 +1,1150 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Patrona Puppy</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="shortcut icon" type="image/png" href="img/logo.png"/>
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+
+
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/jquery-3.5.1.min.js"></script>
+
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="fonts/ionicons/css/ionicons.min.css">
+  <link rel="stylesheet" href="fonts/fontawesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+  <link href="register/css/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
+  <!-- Theme Style -->
+  <link rel="stylesheet" href="css/style.css">
+
+<style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      padding: 0;
+      margin: 0;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    /* Card Grid */
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    /* Card Style */
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    .card-body {
+      flex: 1;
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .card-title {
+      text-align: center;
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      letter-spacing: 1px; /* Equal spacing */
+    }
+
+    .card-text {
+      font-size: 14px;
+      color: #555;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    /* Button */
+    .btn {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 6px;
+      background: #007bff;
+      color: white;
+      font-size: 14px;
+      cursor: pointer;
+      text-align: center;
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #0056b3;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .card-title {
+        font-size: 18px;
+      }
+    }
+     
+    .site-footer {
+      padding: 15px 0;   /* kam height */
+  background: #222;  /* optional */
+  color: #fff;
+    width: 100%;
+
+  
+}
+
+.site-footer h3 {
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+.site-footer p,
+.site-footer li {
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+.site-footer .footer-social li {
+  margin-right: 5px;
+}
+
+  
+  </style>
+
+</head>
+
+<body>
+  <!-- start logo -->
+  <header role="banner">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand absolute" href="index.html"><img src="img/logo.svg" width="20%"
+            style="padding-right: 10px;">patrona puppy</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05"
+          aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- start nav -->
+        <div class="collapse navbar-collapse" id="navbarsExample05" style="margin-left: 5em;">
+          <ul class="navbar-nav mx-auto pl-lg-5 pl-0">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="breed.html">Dog Breeds</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="puppy_care.html">Puppy care</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="FAQs.html">FAQ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="#" data-target="#login" data-toggle="modal">Login</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- END header -->
+  <!-- start log in -->
+  <div id="login" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+      <div class="modal-content">
+        <div class="modal-body">
+          <button data-dismiss="modal" class="close">&times;</button>
+          <h4>Login</h4>
+          <form method="post" name="loginform">
+            <input type="text" Name="Username" placeholder="Username" id="username" required>
+            <input type="password" id="password" Name="Password" placeholder="Password" required>
+            <br>
+            <button type="button" id="btn_login" class="btn btn-success btn-sm" value="LOGIN"
+              onclick="Wefunction()">Login</button>
+            <br>
+
+            <input type="checkbox" id="brand1" value="">
+            <label><span></span>Remember me</label>
+            <br>
+            <a href="mailto:info@patrona.com?subject=Forgot Password
+            &body=Please send me new Password!">Forgot password?</a>
+
+
+            <div class="aitssendbuttonw3ls"></div>
+            <p> <a class="w3_play_icon1" href="register.html">
+                Register new account</a></p>
+            <div class="clear"></div>
+        </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  </div>
+  <!--Trigger-->
+  <!-- END header -->
+
+  <section class="home-slider owl-carousel">
+    <div class="slider-item" style="background-image: url('img/slider-breed.jpg');">
+
+      <div class="container">
+        <div class="row slider-text align-items-center justify-content-center">
+          <div class="col-md-8 text-center col-sm-12 element-animate">
+            <h1>A library of Dog Breeds</h1>
+            <p class="mb-5"> How to know more about your four leg friend? How to know more dog breeds?
+              <br> Good new, we have a big library hear! <br> For each breed you can find out more about their history
+              and personality, location, etc. From giant dog breeds that offer plenty more pup to love to adorable toy
+              types, our extensive dog breed library covers various types and categories. Let's explore together!</p>
+            <p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+  </section>
+  <!-- END slider -->
+
+  <!-- start filter -->
+
+  <div class="container">
+    <div class="loc" style="text-align:center; padding-top: 3em;">
+      <h1>All Dog Breeds</h1>
+    </div>
+    <div class="container mt-5">
+  <h2 class="text-center mb-4">Dog Breeds Gallery</h2>
+
+  <div class="row mb-4">
+
+    <!-- Card 1: Shih Tzu -->
+    <div class="col-lg-4 col-md-6 mb-4">
+      <div class="card h-100 shadow">
+        <img class="card-img-top" src="img/dog/dogs/Shih_Tzu.jpg" alt="Shih Tzu" style="height: 300px; object-fit: cover;">
+        <div class="card-body">
+          <h4 class="card-title text-center">Shih Tzu</h4>
+          <p><strong>Size:</strong> Medium</p>
+          <p><strong>Character:</strong> Affectionate, Loyal, Playful</p>
+          <p><strong>Color:</strong> White, Black, Gold, Gray, Liver, Brindle</p>
+          <button class="btn btn-primary btn-sm mt-2" data-toggle="modal" data-target="#modalShih">Read More</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2: Lhasa Apso -->
+    <div class="col-lg-4 col-md-6 mb-4">
+      <div class="card h-100 shadow">
+        <img class="card-img-top" src="img/dog/dogs/Lhasa_Apso.jpeg" alt="Lhasa Apso" style="height: 300px; object-fit: cover;">
+        <div class="card-body">
+          <h4 class="card-title text-center">Lhasa Apso</h4>
+          <p><strong>Size:</strong> Medium</p>
+          <p><strong>Character:</strong> Independent, Intelligent, Alert, Regal</p>
+          <p><strong>Color:</strong> Gold, Cream, White, Black, Gray, Smoke, Parti-color</p>
+          <button class="btn btn-primary btn-sm mt-2" data-toggle="modal" data-target="#modalLhasa">Read More</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3: Maltese -->
+    <div class="col-lg-4 col-md-6 mb-4">
+      <div class="card h-100 shadow">
+        <img class="card-img-top" src="img/dog/dogs/Maltese.jpeg" alt="Maltese" style="height: 300px; object-fit: cover;">
+        <div class="card-body">
+          <h4 class="card-title text-center">Maltese</h4>
+          <p><strong>Size:</strong> Medium</p>
+          <p><strong>Character:</strong> Gentle, Affectionate, Playful, Intelligent, Alert</p>
+          <p><strong>Color:</strong> Pure White (sometimes ivory or light cream)</p>
+          <button class="btn btn-primary btn-sm mt-2" data-toggle="modal" data-target="#modalMaltese">Read More</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Shih Tzu Modal -->
+<div class="modal fade" id="modalShih" tabindex="-1" role="dialog" aria-labelledby="modalShihLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalShihLabel">Shih Tzu - Full Details</h5>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <img src="img/dog/dogs/Shih_Tzu.jpg" class="img-fluid mb-3" style="height:300px; object-fit:cover;">
+        <p><strong>Name:</strong> Shih Tzu</p>
+        <p><strong>Size:</strong> Medium</p>
+        <p><strong>Character:</strong> Affectionate, Loyal, Playful</p>
+        <p><strong>Color:</strong> White, Black, Gold, Gray, Liver, Brindle, or combinations</p>
+        <p><strong>Geography:</strong> Worldwide (origin Tibet/China)</p>
+        <p><strong>Origin:</strong> Tibet / China</p>
+        <p><strong>Breed Group:</strong> Toy Group (AKC)</p>
+        <p><strong>Type:</strong> Toy/Companion</p>
+        <p><strong>Temperament:</strong> Friendly, Gentle, Outgoing, Alert, Loving</p>
+        <p><strong>Height:</strong> 8–11 inches (20–28 cm)</p>
+        <p><strong>Weight:</strong> 9–16 pounds (4–7.5 kg)</p>
+        <p><strong>Overview:</strong> The Shih Tzu is a small but sturdy toy breed, famous for its long, flowing coat and adorable pushed-in face...</p>
+        <p><strong>History:</strong> The Shih Tzu is one of the oldest toy breeds, believed to date back over a thousand years...</p>
+        <p><strong>Other Names:</strong> N/A</p>
+        <p><strong>Lifespan:</strong> 10–16 years</p>
+        <p><strong>Intelligence:</strong> Average</p>
+        <p><strong>Tendency to Bark:</strong> Medium</p>
+        <p><strong>Maintenance Level:</strong> High – requires regular grooming</p>
+        <p><strong>Health Risk:</strong> Average probability of health issues</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Lhasa Apso Modal -->
+<div class="modal fade" id="modalLhasa" tabindex="-1" role="dialog" aria-labelledby="modalLhasaLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalLhasaLabel">Lhasa Apso - Full Details</h5>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <img src="img/dog/dogs/Lhasa_Apso.jpeg" class="img-fluid mb-3" style="height:300px; object-fit:cover;">
+        <p><strong>Name:</strong> Lhasa Apso</p>
+        <p><strong>Size:</strong> Medium</p>
+        <p><strong>Character:</strong> Independent, Intelligent, Alert, Regal</p>
+        <p><strong>Color:</strong> Gold, Cream, White, Black, Gray, Smoke, Parti-color</p>
+        <p><strong>Geography:</strong> Origin Tibet, now worldwide</p>
+        <p><strong>Origin:</strong> Tibet</p>
+        <p><strong>Breed Group:</strong> Non-Sporting Group (AKC), Utility Group (UKC)</p>
+        <p><strong>Type:</strong> Companion / Watchdog</p>
+        <p><strong>Temperament:</strong> Loyal, Reserved with strangers, Protective, Courageous, Affectionate with family, Sometimes Aloof</p>
+        <p><strong>Height:</strong> 8–11 inches (20–28 cm)</p>
+        <p><strong>Weight:</strong> 9–16 pounds (4–7.5 kg)</p>
+        <p><strong>Overview:</strong> The Lhasa Apso is a small but sturdy breed originally bred as a sentinel dog in Tibetan monasteries...</p>
+        <p><strong>History:</strong> The Lhasa Apso originated in Tibet, where it was considered sacred and kept in monasteries as a watchdog...</p>
+        <p><strong>Other Names:</strong> N/A</p>
+        <p><strong>Lifespan:</strong> 12–15 years</p>
+        <p><strong>Intelligence:</strong> Above Average</p>
+        <p><strong>Tendency to Bark:</strong> Medium</p>
+        <p><strong>Maintenance Level:</strong> High – requires regular grooming</p>
+        <p><strong>Health Risk:</strong> Average probability of health issues</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Maltese Modal -->
+<div class="modal fade" id="modalMaltese" tabindex="-1" role="dialog" aria-labelledby="modalMalteseLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalMalteseLabel">Maltese - Full Details</h5>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <img src="img/dog/dogs/Maltese.jpeg" class="img-fluid mb-3" style="height:300px; object-fit:cover;">
+        <p><strong>Name:</strong> Maltese</p>
+        <p><strong>Size:</strong> Medium</p>
+        <p><strong>Character:</strong> Gentle, Affectionate, Playful, Intelligent, Alert</p>
+        <p><strong>Color:</strong> Pure White (sometimes ivory or light cream)</p>
+        <p><strong>Geography:</strong> Originally Malta, now worldwide (Europe, USA, Asia)</p>
+        <p><strong>Origin:</strong> Malta (Mediterranean region)</p>
+        <p><strong>Breed Group:</strong> Toy Group (AKC)</p>
+        <p><strong>Type:</strong> Companion / Lapdog</p>
+        <p><strong>Temperament:</strong> Loving, Lively, Friendly, Good with children and pets, Sometimes stubborn but trainable</p>
+        <p><strong>Height:</strong> 8–11 inches (20–28 cm)</p>
+        <p><strong>Weight:</strong> 9–16 pounds (4–7.5 kg)</p>
+        <p><strong>Overview:</strong> The Maltese is a small, elegant toy breed known for its long, flowing, silky white coat...</p>
+        <p><strong>History:</strong> One of the oldest toy breeds, the Maltese originated in the central Mediterranean region...</p>
+        <p><strong>Other Names:</strong> N/A</p>
+        <p><strong>Lifespan:</strong> 12–15 years</p>
+        <p><strong>Intelligence:</strong> High</p>
+        <p><strong>Tendency to Bark:</strong> Medium</p>
+        <p><strong>Maintenance Level:</strong> High – requires regular grooming</p>
+        <p><strong>Health Risk:</strong> Low to Average probability</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
+      </div>
+      
+    </div>
+  </div>
+</div>
+<!-- Second Row -->
+<div class="row mb-4">
+
+  <!-- Card 1: Affenpinscher -->
+  <div class="col-lg-4 col-md-6 mb-4">
+    <div class="card h-100 shadow">
+      <img class="card-img-top" src="img/dog/dogs/Affenpinscher.webp" alt="Affenpinscher" style="height: 300px; object-fit: cover;">
+      <div class="card-body">
+        <h4 class="card-title text-center">Affenpinscher</h4>
+        <p><strong>Size:</strong> Medium</p>
+        <p><strong>Character:</strong> Curious, Playful, Fun-loving, Stubborn, Adventurous</p>
+        <p><strong>Color:</strong> Usually black, gray, silver, red, or black-and-tan</p>
+        <button class="btn btn-primary btn-sm mt-2" data-toggle="modal" data-target="#modalAffen">Read More</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card 2: Afghan Hound -->
+  <div class="col-lg-4 col-md-6 mb-4">
+    <div class="card h-100 shadow">
+      <img class="card-img-top" src="img/dog/dogs/Afghan_Hound.jpg" alt="Afghan Hound" style="height: 300px; object-fit: cover;">
+      <div class="card-body">
+        <h4 class="card-title text-center">Afghan Hound</h4>
+        <p><strong>Size:</strong> Medium</p>
+        <p><strong>Character:</strong> Loyal, Affectionate, Aloof</p>
+        <p><strong>Color:</strong> Black, cream, red, blue, brindle, or domino</p>
+        <button class="btn btn-primary btn-sm mt-2" data-toggle="modal" data-target="#modalAfghan">Read More</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card 3: Airedale Terrier -->
+  <div class="col-lg-4 col-md-6 mb-4">
+    <div class="card h-100 shadow">
+      <img class="card-img-top" src="img/dog/Airedale_Terrier.webp" alt="Airedale Terrier" style="height: 300px; object-fit: cover;">
+      <div class="card-body">
+        <h4 class="card-title text-center">Airedale Terrier</h4>
+        <p><strong>Size:</strong> Medium</p>
+        <p><strong>Character:</strong> Intelligent, Loyal, Alert</p>
+        <p><strong>Color:</strong> Tan with a black or grizzle saddle</p>
+        <button class="btn btn-primary btn-sm mt-2" data-toggle="modal" data-target="#modalAiredale">Read More</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- Affenpinscher Modal -->
+<div class="modal fade" id="modalAffen" tabindex="-1" role="dialog" aria-labelledby="modalAffenLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalAffenLabel">Affenpinscher - Full Details</h5>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <img src="img/dog/dogs/Affenpinscher.webp" class="img-fluid mb-3" style="height:300px; object-fit:cover;">
+        <p><strong>Name:</strong> Affenpinscher</p>
+        <p><strong>Size:</strong> Medium</p>
+        <p><strong>Character:</strong> Curious, Playful, Fun-loving, Stubborn, Adventurous</p>
+        <p><strong>Color:</strong> Usually black, gray, silver, red, or black-and-tan</p>
+        <p><strong>Geography:</strong> Originated in Germany, now worldwide</p>
+        <p><strong>Origin:</strong> Germany</p>
+        <p><strong>Breed Group:</strong> Toy Group (AKC)</p>
+        <p><strong>Type:</strong> Companion / Watchdog</p>
+        <p><strong>Temperament:</strong> Affectionate, Loyal, Bold, Protective, Social but wary of strangers</p>
+        <p><strong>Height:</strong> 8–11 inches (20–28 cm)</p>
+        <p><strong>Weight:</strong> 9–16 pounds (4–7.5 kg)</p>
+        <p><strong>Overview:</strong> The Affenpinscher is a lively and affectionate small dog with a distinctive monkey-like face...</p>
+        <p><strong>History:</strong> The Affenpinscher originated in Germany in the 1600s, initially bred to eliminate rats...</p>
+        <p><strong>Other Names:</strong> Monkey Terrier, Affen, Black Devil</p>
+        <p><strong>Lifespan:</strong> 12–14 years</p>
+        <p><strong>Intelligence:</strong> Above Average</p>
+        <p><strong>Tendency to Bark:</strong> Medium</p>
+        <p><strong>Maintenance Level:</strong> Moderate grooming needs</p>
+        <p><strong>Health Risk:</strong> Average probability</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Afghan Hound Modal -->
+<div class="modal fade" id="modalAfghan" tabindex="-1" role="dialog" aria-labelledby="modalAfghanLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalAfghanLabel">Afghan Hound - Full Details</h5>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <img src="img/dog/dogs/Afghan_Hound.jpg" class="img-fluid mb-3" style="height:300px; object-fit:cover;">
+        <p><strong>Name:</strong> Afghan Hound</p>
+        <p><strong>Size:</strong> Medium</p>
+        <p><strong>Character:</strong> Loyal, Affectionate, Aloof</p>
+        <p><strong>Color:</strong> Black, cream, red, blue, brindle, or domino</p>
+        <p><strong>Geography:</strong> Originated in Afghanistan; now popular worldwide</p>
+        <p><strong>Origin:</strong> Afghanistan</p>
+        <p><strong>Breed Group:</strong> Hound Group (AKC)</p>
+        <p><strong>Type:</strong> Sighthound, Companion Dog</p>
+        <p><strong>Temperament:</strong> Affectionate with family, aloof with strangers, dignified, independent, calm indoors</p>
+        <p><strong>Height:</strong> 8–11 inches (20–28 cm)</p>
+        <p><strong>Weight:</strong> 9–16 pounds (4–7.5 kg)</p>
+        <p><strong>Overview:</strong> The Afghan Hound is a large, elegant sighthound known for its long, silky coat and regal bearing...</p>
+        <p><strong>History:</strong> Afghan Hounds originated in Afghanistan, where they were bred as hunting dogs...</p>
+        <p><strong>Other Names:</strong> Afghan, Affie</p>
+        <p><strong>Lifespan:</strong> 12–18 years</p>
+        <p><strong>Intelligence:</strong> Average</p>
+        <p><strong>Tendency to Bark:</strong> Low</p>
+        <p><strong>Maintenance Level:</strong> Medium – regular grooming</p>
+        <p><strong>Health Risk:</strong> Average probability</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Airedale Terrier Modal -->
+<div class="modal fade" id="modalAiredale" tabindex="-1" role="dialog" aria-labelledby="modalAiredaleLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalAiredaleLabel">Airedale Terrier - Full Details</h5>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <img src="img/dog/Airedale_Terrier.webp" class="img-fluid mb-3" style="height:300px; object-fit:cover;">
+        <p><strong>Name:</strong> Airedale Terrier</p>
+        <p><strong>Size:</strong> Medium</p>
+        <p><strong>Character:</strong> Intelligent, Loyal, Alert</p>
+        <p><strong>Color:</strong> Tan with a black or grizzle saddle</p>
+        <p><strong>Geography:</strong> Originated in England (Yorkshire, Airedale Valley)</p>
+        <p><strong>Origin:</strong> United Kingdom</p>
+        <p><strong>Breed Group:</strong> Terrier Group (AKC)</p>
+        <p><strong>Type:</strong> Working Terrier, Companion Dog</p>
+        <p><strong>Temperament:</strong> Smart, outgoing, loyal, courageous, versatile. Good with families, protective</p>
+        <p><strong>Height:</strong> 21–23 inches (53–61 cm)</p>
+        <p><strong>Weight:</strong> 40–65 pounds (18–29 kg)</p>
+        <p><strong>Overview:</strong> The Airedale Terrier, often called the 'King of Terriers,' is the largest of the terrier breeds...</p>
+        <p><strong>History:</strong> The breed was developed in the Aire Valley of Yorkshire, England, in the mid-19th century...</p>
+        <p><strong>Other Names:</strong> King of Terriers</p>
+        <p><strong>Lifespan:</strong> 10–14 years</p>
+        <p><strong>Intelligence:</strong> High</p>
+        <p><strong>Tendency to Bark:</strong> Medium</p>
+        <p><strong>Maintenance Level:</strong> High – requires regular grooming and exercise</p>
+        <p><strong>Health Risk:</strong> High probability</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Third Row -->
+<div class="row mb-4">
+
+  <!-- Card 1: Akita -->
+  <div class="col-lg-4 col-md-6 mb-4">
+    <div class="card h-100 shadow">
+      <img class="card-img-top" src="img/dog/Akita.webp" alt="Akita" style="height: 300px; object-fit: cover;">
+      <div class="card-body">
+        <h4 class="card-title text-center">Akita</h4>
+        <p><strong>Size:</strong> Medium</p>
+        <p><strong>Character:</strong> Active, Loyal, Courageous</p>
+        <p><strong>Color:</strong> White, Brindle, Red, Sesame, Pinto</p>
+        <button class="btn btn-primary btn-sm mt-2" data-toggle="modal" data-target="#modalAkita">Read More</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card 2: Alaskan Husky -->
+  <div class="col-lg-4 col-md-6 mb-4">
+    <div class="card h-100 shadow">
+      <img class="card-img-top" src="img/dog/Alaskan_Husky.webp" alt="Alaskan Husky" style="height: 300px; object-fit: cover;">
+      <div class="card-body">
+        <h4 class="card-title text-center">Alaskan Husky</h4>
+        <p><strong>Size:</strong> Medium</p>
+        <p><strong>Character:</strong> Affectionate, Loyal, Friendly, Energetic</p>
+        <p><strong>Color:</strong> Black, Grey, White, Red, or mixed markings</p>
+        <button class="btn btn-primary btn-sm mt-2" data-toggle="modal" data-target="#modalHusky">Read More</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card 3: Alaskan Malamute -->
+  <div class="col-lg-4 col-md-6 mb-4">
+    <div class="card h-100 shadow">
+      <img class="card-img-top" src="img/dog/Alaskan_Malamute.webp" alt="Alaskan Malamute" style="height: 300px; object-fit: cover;">
+      <div class="card-body">
+        <h4 class="card-title text-center">Alaskan Malamute</h4>
+        <p><strong>Size:</strong> Medium</p>
+        <p><strong>Character:</strong> Intelligent, Active, Loyal, Strong-willed</p>
+        <p><strong>Color:</strong> Gray/White, Sable/White, Black/White, Seal/White, Red/White</p>
+        <button class="btn btn-primary btn-sm mt-2" data-toggle="modal" data-target="#modalMalamute">Read More</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- Akita Modal -->
+<div class="modal fade" id="modalAkita" tabindex="-1" role="dialog" aria-labelledby="modalAkitaLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalAkitaLabel">Akita - Full Details</h5>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <img src="img/dog/Akita.webp" class="img-fluid mb-3" style="height:300px; object-fit:cover;">
+        <p><strong>Name:</strong> Akita</p>
+        <p><strong>Size:</strong> Medium</p>
+        <p><strong>Character:</strong> Active, Loyal, Courageous</p>
+        <p><strong>Color:</strong> White, Brindle, Red, Sesame, Pinto</p>
+        <p><strong>Geography:</strong> Originated in Japan (Akita Prefecture)</p>
+        <p><strong>Origin:</strong> Japan</p>
+        <p><strong>Breed Group:</strong> Working Group (AKC), Utility Group (UKC)</p>
+        <p><strong>Type:</strong> Working Dog, Guard Dog, Companion</p>
+        <p><strong>Temperament:</strong> Independent, strong-willed, loyal, protective, wary of strangers</p>
+        <p><strong>Height:</strong> Male: 26–28 inches, Female: 24–26 inches</p>
+        <p><strong>Weight:</strong> Male: 100–130 lbs, Female: 70–100 lbs</p>
+        <p><strong>Overview:</strong> The Akita is a powerful, dignified, and courageous large breed from Japan...</p>
+        <p><strong>History:</strong> The Akita traces its roots back to the mountainous Akita Prefecture of northern Japan...</p>
+        <p><strong>Other Names:</strong> Akita Inu, Japanese Akita</p>
+        <p><strong>Lifespan:</strong> 11–15 years</p>
+        <p><strong>Intelligence:</strong> High</p>
+        <p><strong>Tendency to Bark:</strong> Low to Medium</p>
+        <p><strong>Maintenance Level:</strong> High – exercise, training, grooming</p>
+        <p><strong>Health Risk:</strong> High probability</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Alaskan Husky Modal -->
+<div class="modal fade" id="modalHusky" tabindex="-1" role="dialog" aria-labelledby="modalHuskyLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalHuskyLabel">Alaskan Husky - Full Details</h5>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <img src="img/dog/Alaskan_Husky.webp" class="img-fluid mb-3" style="height:300px; object-fit:cover;">
+        <p><strong>Name:</strong> Alaskan Husky</p>
+        <p><strong>Size:</strong> Medium</p>
+        <p><strong>Character:</strong> Affectionate, Loyal, Friendly, Energetic</p>
+        <p><strong>Color:</strong> Black, Grey, White, Red, or mixed markings</p>
+        <p><strong>Geography:</strong> North America (developed in Alaska, USA)</p>
+        <p><strong>Origin:</strong> United States (Alaska)</p>
+        <p><strong>Breed Group:</strong> Working / Sled Dog</p>
+        <p><strong>Type:</strong> Working Dog, Sled Dog, Companion</p>
+        <p><strong>Temperament:</strong> Affectionate with family, social, high energy, loves outdoor activities</p>
+        <p><strong>Height:</strong> 20–24 inches</p>
+        <p><strong>Weight:</strong> 35–60 lbs</p>
+        <p><strong>Overview:</strong> The Alaskan Husky is a purpose-bred sled dog, valued for speed, endurance, and working ability...</p>
+        <p><strong>History:</strong> Developed in Alaska by mushers who crossbred various northern dog breeds...</p>
+        <p><strong>Other Names:</strong> Alaskan Sled Dog</p>
+        <p><strong>Lifespan:</strong> 12–15 years</p>
+        <p><strong>Intelligence:</strong> High</p>
+        <p><strong>Tendency to Bark:</strong> Medium to High</p>
+        <p><strong>Maintenance Level:</strong> High – intense exercise and grooming</p>
+        <p><strong>Health Risk:</strong> Average probability</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Alaskan Malamute Modal -->
+<div class="modal fade" id="modalMalamute" tabindex="-1" role="dialog" aria-labelledby="modalMalamuteLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalMalamuteLabel">Alaskan Malamute - Full Details</h5>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <img src="img/dog/Alaskan_Malamute.webp" class="img-fluid mb-3" style="height:300px; object-fit:cover;">
+        <p><strong>Name:</strong> Alaskan Malamute</p>
+        <p><strong>Size:</strong> Medium</p>
+        <p><strong>Character:</strong> Intelligent, Active, Loyal, Strong-willed</p>
+        <p><strong>Color:</strong> Gray/White, Sable/White, Black/White, Seal/White, Red/White</p>
+        <p><strong>Geography:</strong> North America (Alaska, USA)</p>
+        <p><strong>Origin:</strong> Native Mahlemut Inuit tribe of Alaska</p>
+        <p><strong>Breed Group:</strong> Working Group (AKC)</p>
+        <p><strong>Type:</strong> Working Dog, Sled Dog, Companion</p>
+        <p><strong>Temperament:</strong> Affectionate, playful, independent, can be stubborn, good with children</p>
+        <p><strong>Height:</strong> Males: 25 inches, Females: 23 inches</p>
+        <p><strong>Weight:</strong> Males: 85–100 lbs, Females: 75–85 lbs</p>
+        <p><strong>Overview:</strong> The Alaskan Malamute is one of the oldest Arctic sled dog breeds, known for strength and endurance...</p>
+        <p><strong>History:</strong> The breed has ancient roots tracing back thousands of years with the Mahlemut Inuit tribe...</p>
+        <p><strong>Other Names:</strong> Malamute</p>
+        <p><strong>Lifespan:</strong> 12–16 years</p>
+        <p><strong>Intelligence:</strong> High</p>
+        <p><strong>Tendency to Bark:</strong> Low to Medium</p>
+        <p><strong>Maintenance Level:</strong> Medium – regular exercise and coat care</p>
+        <p><strong>Health Risk:</strong> High probability</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Fourth Row -->
+<div class="row mb-4">
+
+  <!-- Card 1: American Bulldog -->
+  <div class="col-lg-4 col-md-6 mb-4">
+    <div class="card h-100 shadow">
+      <img class="card-img-top" src="img/dog/American_Bulldog.webp" alt="American Bulldog" style="height: 300px; object-fit: cover;">
+      <div class="card-body">
+        <h4 class="card-title text-center">American Bulldog</h4>
+        <p><strong>Size:</strong> Medium to Large</p>
+        <p><strong>Character:</strong> Strong, Stocky, Gentle, Sensitive, Quirky, Clownish</p>
+        <p><strong>Color:</strong> White, Brindle, Fawn, Pied, or combinations</p>
+        <button class="btn btn-primary btn-sm mt-2" data-toggle="modal" data-target="#modalBulldog">Read More</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card 2: American Eskimo Dog -->
+  <div class="col-lg-4 col-md-6 mb-4">
+    <div class="card h-100 shadow">
+      <img class="card-img-top" src="img/dog/American_Eskimo_Dog.avif" alt="American Eskimo Dog" style="height: 300px; object-fit: cover;">
+      <div class="card-body">
+        <h4 class="card-title text-center">American Eskimo Dog</h4>
+        <p><strong>Size:</strong> Small to Medium</p>
+        <p><strong>Character:</strong> Eager to Please, Intelligent, Active</p>
+        <p><strong>Color:</strong> White, Cream, Biscuit</p>
+        <button class="btn btn-primary btn-sm mt-2" data-toggle="modal" data-target="#modalEskimo">Read More</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card 3: American Foxhound -->
+  <div class="col-lg-4 col-md-6 mb-4">
+    <div class="card h-100 shadow">
+      <img class="card-img-top" src="img/dog/American_Foxhound.webp" alt="American Foxhound" style="height: 300px; object-fit: cover;">
+      <div class="card-body">
+        <h4 class="card-title text-center">American Foxhound</h4>
+        <p><strong>Size:</strong> Medium to Large</p>
+        <p><strong>Character:</strong> Easy-going, Good-natured, Independent, Energetic, Alert</p>
+        <p><strong>Color:</strong> Tri-color (Black, White, Tan), Red & White, Lemon & White</p>
+        <button class="btn btn-primary btn-sm mt-2" data-toggle="modal" data-target="#modalFoxhound">Read More</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- American Bulldog Modal -->
+<div class="modal fade" id="modalBulldog" tabindex="-1" role="dialog" aria-labelledby="modalBulldogLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalBulldogLabel">American Bulldog - Full Details</h5>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <img src="img/dog/American_Bulldog.webp" class="img-fluid mb-3" style="height:300px; object-fit:cover;">
+        <p><strong>Name:</strong> American Bulldog</p>
+        <p><strong>Size:</strong> Medium to Large</p>
+        <p><strong>Character:</strong> Strong, Stocky, Gentle, Sensitive, Quirky, Clownish when happy</p>
+        <p><strong>Color:</strong> White, Brindle, Fawn, Pied, or combinations</p>
+        <p><strong>Geography:</strong> Origin United States, now worldwide</p>
+        <p><strong>Origin:</strong> United States</p>
+        <p><strong>Breed Group:</strong> Foundation Stock Service</p>
+        <p><strong>Type:</strong> Companion / Guard Dog</p>
+        <p><strong>Temperament:</strong> Loyal, Friendly, Gentle, Protective, Affectionate with family, Suspicious of strangers</p>
+        <p><strong>Height:</strong> 20–28 inches (50–71 cm)</p>
+        <p><strong>Weight:</strong> 60–120 pounds (27–54 kg)</p>
+        <p><strong>Overview:</strong> American Bulldogs are strong, loyal dogs that are affectionate with family but naturally protective. They are known for their clownish, playful behavior when happy.</p>
+        <p><strong>History:</strong> Originally bred in the United States for farm work, guarding property, and hunting, the American Bulldog is a resilient and versatile breed.</p>
+        <p><strong>Other Names:</strong> White English Southern Bulldog (historical)</p>
+        <p><strong>Lifespan:</strong> 8–15 years</p>
+        <p><strong>Intelligence:</strong> Average</p>
+        <p><strong>Tendency to Bark:</strong> Low</p>
+        <p><strong>Maintenance Level:</strong> Medium</p>
+        <p><strong>Health Risk:</strong> Higher than average probability of developing health issues</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- American Eskimo Dog Modal -->
+<div class="modal fade" id="modalEskimo" tabindex="-1" role="dialog" aria-labelledby="modalEskimoLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalEskimoLabel">American Eskimo Dog - Full Details</h5>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <img src="img/dog/American_Eskimo_Dog.avif" class="img-fluid mb-3" style="height:300px; object-fit:cover;">
+        <p><strong>Name:</strong> American Eskimo Dog</p>
+        <p><strong>Size:</strong> Small to Medium</p>
+        <p><strong>Character:</strong> Eager to please, Intelligent, Active</p>
+        <p><strong>Color:</strong> White, Cream, Biscuit</p>
+        <p><strong>Geography:</strong> Origin United States, now worldwide</p>
+        <p><strong>Origin:</strong> United States</p>
+        <p><strong>Breed Group:</strong> Non-Sporting Group (AKC)</p>
+        <p><strong>Type:</strong> Companion / Watchdog</p>
+        <p><strong>Temperament:</strong> Eager to Please, Intelligent, Active, Friendly, Alert</p>
+        <p><strong>Height:</strong> 12–19 inches (30–48 cm)</p>
+        <p><strong>Weight:</strong> 7–35 pounds (3–16 kg)</p>
+        <p><strong>Overview:</strong> The American Eskimo Dog is a lively and intelligent companion breed that thrives in active households and enjoys colder climates.</p>
+        <p><strong>History:</strong> Despite its name, the American Eskimo Dog originated in Germany as a spitz-type breed and was brought to the U.S., where it became popular as a companion and show dog.</p>
+        <p><strong>Other Names:</strong> Eskie</p>
+        <p><strong>Lifespan:</strong> 13–15 years</p>
+        <p><strong>Intelligence:</strong> Above Average</p>
+        <p><strong>Tendency to Bark:</strong> Medium</p>
+        <p><strong>Maintenance Level:</strong> Medium – requires regular grooming</p>
+        <p><strong>Health Risk:</strong> Low probability of health issues</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- American Foxhound Modal -->
+<div class="modal fade" id="modalFoxhound" tabindex="-1" role="dialog" aria-labelledby="modalFoxhoundLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalFoxhoundLabel">American Foxhound - Full Details</h5>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <img src="img/dog/American_Foxhound.webp" class="img-fluid mb-3" style="height:300px; object-fit:cover;">
+        <p><strong>Name:</strong> American Foxhound</p>
+        <p><strong>Size:</strong> Medium to Large</p>
+        <p><strong>Character:</strong> Easy-going, Good-natured, Independent, Energetic, Alert</p>
+        <p><strong>Color:</strong> Tri-color (Black, White, Tan), Red & White, Lemon & White</p>
+        <p><strong>Geography:</strong> Origin United States, now worldwide</p>
+        <p><strong>Origin:</strong> United States</p>
+        <p><strong>Breed Group:</strong> Hound Group (AKC)</p>
+        <p><strong>Type:</strong> Hunting / Companion</p>
+        <p><strong>Temperament:</strong> Easy-going, Good-natured, Independent, Friendly, Active</p>
+        <p><strong>Height:</strong> 21–25 inches (53–64 cm)</p>
+        <p><strong>Weight:</strong> 55–70 pounds (25–32 kg)</p>
+        <p><strong>Overview:</strong> The American Foxhound is an energetic, intelligent breed, ideal for active owners and hunters. They enjoy exercise and outdoor activities.</p>
+        <p><strong>History:</strong> Developed in the United States for fox hunting, the American Foxhound descends from English Foxhounds and has a strong scenting ability and endurance.</p>
+        <p><strong>Other Names:</strong> N/A</p>
+        <p><strong>Lifespan:</strong> 11–13 years</p>
+        <p><strong>Intelligence:</strong> Above Average</p>
+        <p><strong>Tendency to Bark:</strong> Medium</p>
+        <p><strong>Maintenance Level:</strong> Low for grooming, High for exercise & training</p>
+        <p><strong>Health Risk:</strong> Medium probability of health issues</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Fifth Row -->
+<div class="row mb-4">
+
+  <!-- Card 1: American Staffordshire Terrier -->
+  <div class="col-lg-4 col-md-6 mb-4">
+    <div class="card h-100 shadow">
+      <img class="card-img-top" src="img/dog/American_Staffordshire_Terrier.webp" alt="American Staffordshire Terrier" style="height: 300px; object-fit: cover;">
+      <div class="card-body">
+        <h4 class="card-title text-center">American Staffordshire Terrier</h4>
+        <p><strong>Size:</strong> Medium</p>
+        <p><strong>Character:</strong> Muscular, Energetic, Affectionate, Sweet-tempered, Loyal</p>
+        <p><strong>Color:</strong> Brindle, Fawn, Blue, Black, White, or Combinations</p>
+        <button class="btn btn-primary btn-sm mt-2" data-toggle="modal" data-target="#modalStaffordshire">Read More</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card 2: Norwegian Lundehund -->
+  <div class="col-lg-4 col-md-6 mb-4">
+    <div class="card h-100 shadow">
+      <img class="card-img-top" src="img/dog/NorwegianLundehund.jpg" alt="Norwegian Lundehund" style="height: 300px; object-fit: cover;">
+      <div class="card-body">
+        <h4 class="card-title text-center">Norwegian Lundehund</h4>
+        <p><strong>Size:</strong> Small</p>
+        <p><strong>Character:</strong> Fluffy</p>
+        <p><strong>Color:</strong> Others</p>
+        <button class="btn btn-primary btn-sm mt-2" data-toggle="modal" data-target="#modalLundehund">Read More</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card 3: Olde English Bulldogge -->
+  <div class="col-lg-4 col-md-6 mb-4">
+    <div class="card h-100 shadow">
+      <img class="card-img-top" src="img/dog/OldeEnglishBulldogge.jpg" alt="Olde English Bulldogge" style="height: 300px; object-fit: cover;">
+      <div class="card-body">
+        <h4 class="card-title text-center">Olde English Bulldogge</h4>
+        <p><strong>Size:</strong> Medium</p>
+        <p><strong>Character:</strong> Best guard</p>
+        <p><strong>Color:</strong> Others</p>
+        <button class="btn btn-primary btn-sm mt-2" data-toggle="modal" data-target="#modalOldeBulldogge">Read More</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- Modals -->
+
+<!-- Modal: American Staffordshire Terrier -->
+<div class="modal fade" id="modalStaffordshire" tabindex="-1" role="dialog" aria-labelledby="modalStaffordshireLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalStaffordshireLabel">American Staffordshire Terrier - Full Details</h5>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <img src="img/dog/American_Staffordshire_Terrier.webp" class="img-fluid mb-3" style="height:300px; object-fit:cover;">
+        <p><strong>Name:</strong> American Staffordshire Terrier</p>
+        <p><strong>Size:</strong> Medium</p>
+        <p><strong>Character:</strong> Muscular, Energetic, Affectionate, Sweet-tempered, Loyal</p>
+        <p><strong>Color:</strong> Brindle, Fawn, Blue, Black, White, or Combinations</p>
+        <p><strong>Geography:</strong> Origin United States, now worldwide</p>
+        <p><strong>Origin:</strong> United States</p>
+        <p><strong>Breed Group:</strong> Terrier Group (AKC)</p>
+        <p><strong>Type:</strong> Companion / Watchdog</p>
+        <p><strong>Temperament:</strong> Loyal, Courageous, Friendly, Affectionate with family, Protective</p>
+        <p><strong>Height:</strong> 17–19 inches (43–48 cm)</p>
+        <p><strong>Weight:</strong> 40–70 pounds (18–32 kg)</p>
+        <p><strong>Overview:</strong> American Staffordshire Terriers are muscular, energetic dogs suited for active families. Despite their reputation, they are affectionate and gentle companions.</p>
+        <p><strong>History:</strong> Developed in the United States from bull-and-terrier breeds, they were originally used for farm work, companionship, and as watchdogs.</p>
+        <p><strong>Other Names:</strong> American Staffy, Amstaff</p>
+        <p><strong>Lifespan:</strong> 10–12 years</p>
+        <p><strong>Intelligence:</strong> Above Average</p>
+        <p><strong>Tendency to Bark:</strong> Moderate</p>
+        <p><strong>Maintenance Level:</strong> Medium</p>
+        <p><strong>Health Risk:</strong> Average probability of health issues</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal: Norwegian Lundehund -->
+<div class="modal fade" id="modalLundehund" tabindex="-1" role="dialog" aria-labelledby="modalLundehundLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalLundehundLabel">Norwegian Lundehund - Full Details</h5>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <img src="img/dog/NorwegianLundehund.jpg" class="img-fluid mb-3" style="height:300px; object-fit:cover;">
+        <p><strong>Name:</strong> Norwegian Lundehund</p>
+        <p><strong>Size:</strong> Small</p>
+        <p><strong>Character:</strong> Fluffy</p>
+        <p><strong>Color:</strong> Others</p>
+        <p><strong>Geography:</strong> Europe</p>
+        <p><strong>Origin:</strong> Norway</p>
+        <p><strong>Breed Group:</strong> Non Sporting (AKC:2011), Northern Breed (UKC)</p>
+        <p><strong>Type:</strong> Purebred</p>
+        <p><strong>Temperament:</strong> Alert, Energetic, Loyal, Protective</p>
+        <p><strong>Height:</strong> 12-15.5 inches (31-39 cm)</p>
+        <p><strong>Weight:</strong> 13-20 pounds (6-9 kg)</p>
+        <p><strong>Overview:</strong> The Norwegian Lundehund is a small and agile Spitz breed with unique characteristics such as six toes on each foot, flexible ears, and the ability to tip the head backward. Originally used to hunt puffins in Norway.</p>
+        <p><strong>History:</strong> One of the world's rarest dogs. Recognized by the AKC in 2011. Saved from extinction after WWII.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal: Olde English Bulldogge -->
+<div class="modal fade" id="modalOldeBulldogge" tabindex="-1" role="dialog" aria-labelledby="modalOldeBulldoggeLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalOldeBulldoggeLabel">Olde English Bulldogge - Full Details</h5>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <img src="img/dog/OldeEnglishBulldogge.jpg" class="img-fluid mb-3" style="height:300px; object-fit:cover;">
+        <p><strong>Name:</strong> Olde English Bulldogge</p>
+        <p><strong>Size:</strong> Medium</p>
+        <p><strong>Character:</strong> Best guard</p>
+        <p><strong>Color:</strong> Others</p>
+        <p><strong>Geography:</strong> North America</p>
+        <p><strong>Origin:</strong> United States</p>
+        <p><strong>Breed Group:</strong> Guardian Dogs (UKC)</p>
+        <p><strong>Type:</strong> Purebred</p>
+        <p><strong>Temperament:</strong> Alert, Confident, Courageous</p>
+        <p><strong>Height:</strong> 17-20 inches (43-51 cm)</p>
+        <p><strong>Weight:</strong> 60-80 pounds (27-36 kg)</p>
+        <p><strong>Overview:</strong> The Olde English Bulldogge is a muscular, medium-sized dog of great strength and agility, well-balanced, and capable of working without restrictions. Excellent companion and working dog.</p>
+        <p><strong>History:</strong> Revival of Regency-Period Bulldog in 1971 by Dr. Fechimer. Recognized by UKC in 2014. Bred for health, longevity, and performance.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+    
+
+  <!-- start footer -->
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="row mb-2"> <!-- mb-5 → mb-2 -->
+      <div class="col-md-4 mb-2"> <!-- mb-5 → mb-2 -->
+        <h3>About Patrona Puppy</h3>
+        <p class="mb-2">This website is created by a veteran who wishes to share stories about the dogs she has met and studied. It is also a place for dog lovers who want to learn more about these amazing creatures.</p>
+        <ul class="list-unstyled footer-link d-flex footer-social">
+          <li><a href="#" class="p-2"><span class="fa fa-twitter"></span></a></li>
+          <li><a href="#" class="p-2"><span class="fa fa-facebook"></span></a></li>
+          <li><a href="#" class="p-2"><span class="fa fa-linkedin"></span></a></li>
+          <li><a href="#" class="p-2"><span class="fa fa-instagram"></span></a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-5 mb-2">
+        <h3>Contact Info</h3>
+        <ul class="list-unstyled footer-link">
+          <li><span class="d-block">Address:</span><span class="text-white">Aptech North Nazimabad</span></li>
+          <li><span class="d-block">Telephone:</span><span class="text-white">+92 340 3354272</span></li>
+          <li><span class="d-block">Email:</span><span class="text-white">imobaidafridi@gmail.com</span></li>
+        </ul>
+      </div>
+
+      <div class="col-md-3 mb-2">
+        <h3>Quick Links</h3>
+        <ul class="list-unstyled footer-link">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="breed.html">Dog Breeds</a></li>
+          <li><a href="puppy_care.html">Puppy Care</a></li>
+          <li><a href="FAQs.html">FAQ</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12 text-center">
+        <p>&copy; <script>document.write(new Date().getFullYear());</script> All rights reserved | This website is made by Ubaid</p>
+      </div>
+    </div>
+  </div>
+</footer>
+  <!-- END footer -->
+
+  <!-- loader -->
+  <div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+      <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+      <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+        stroke="#f4b214" /></svg></div>
+
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/jquery-3.5.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="json/data_dog.js"></script>
+
+  <script>
+
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const sizeOp = urlParams.get('sizeOp');
+    const characterOp = urlParams.get('characterOp');
+    const colorOp = urlParams.get('colorOp');
+    const geographyOp = urlParams.get('GeographyOp');
+    if (sizeOp)
+      $('input:radio[name="sizeOp"]').filter('[value="' + sizeOp + '"]').attr('checked', true);
+    if (characterOp)
+      $('input:radio[name="characterOp"]').filter('[value="' + characterOp + '"]').attr('checked', true);
+    if (colorOp)
+      $('input:radio[name="colorOp"]').filter('[value="' + colorOp + '"]').attr('checked', true);
+    if (geographyOp)
+      $('input:radio[name="GeographyOp"]').filter('[value="' + geographyOp + '"]').attr('checked', true);
+
+    let data = filter();
+    //  currentPage = 1;
+    renderDataDog(data)
+    renderListPage(data)
+    changePage()
+
+    $("#reset").click(function () {
+      $("input:radio").removeAttr("checked");
+    })
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</body>
+
+</html>
+
+<script>
+  function Wefunction() {
+    var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+        if (username == null || username == "") {
+            alert("Please enter the username.");
+            return false;
+        }
+        if (password == null || password == "") {
+            alert("Please enter the password.");
+            return false;
+        }
+        else{alert('Login Succes! \nLets explore the website more!');
+        document.location = 'index.html'}     
+  }
+
+</script>
